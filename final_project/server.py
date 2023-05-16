@@ -11,13 +11,13 @@ def index():
 
 @app.route('/englishToFrench')
 def english_to_french_endpoint():
-    english_text = request.args.get('text')
+    english_text = request.args.get('textToTranslate')
     french_text = english_to_french(english_text)
     return french_text
 
 @app.route('/frenchToEnglish')
 def french_to_english_endpoint():
-    french_text = request.args.get('text')
+    french_text = request.args.get('textToTranslate')
     english_text = french_to_english(french_text)
     return english_text
 
